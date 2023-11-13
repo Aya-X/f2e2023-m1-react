@@ -1,37 +1,15 @@
-import { useState } from 'react';
-
-import reactLogo from './assets/react.svg';
-import './App.css';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 
 function App(): JSX.Element {
-  const [count, setCount] = useState<number>(0);
-
   return (
     <>
-      <div>
-        <a href="https://react.dev" rel="noopener noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
+      <CssBaseline />
 
-      <h1>Vite + React</h1>
-
-      <div className="card">
-        <button
-          type="button"
-          onClick={() => setCount((prevCount) => prevCount + 1)}
-        >
-          <span>count is </span>
-          {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Container sx={{ maxWidth: '1184px' }} maxWidth={false}>
+        <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} />
+      </Container>
     </>
   );
 }
