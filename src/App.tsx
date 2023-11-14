@@ -10,6 +10,7 @@ import Fab from '@mui/material/Fab';
 import ScrollTop from './components/ScrollTop';
 
 declare module '@mui/material/styles' {
+  // 能夠在 palette 中找到這個屬性
   interface Palette {
     lime1: Palette['primary'];
     lime2: Palette['primary'];
@@ -24,6 +25,7 @@ declare module '@mui/material/styles' {
     gray6: Palette['primary'];
   }
 
+  // 能用使用 createTheme 來設定這個屬性
   interface PaletteOptions {
     lime1?: PaletteOptions['primary'];
     lime2?: PaletteOptions['primary'];
@@ -36,6 +38,22 @@ declare module '@mui/material/styles' {
     gray4?: PaletteOptions['primary'];
     gray5?: PaletteOptions['primary'];
     gray6?: PaletteOptions['primary'];
+  }
+
+  interface ThemeComponents {
+    variants: {
+      small: React.CSSProperties;
+      large: React.CSSProperties;
+    };
+  }
+
+  interface Components {
+    PrimaryButton: ThemeComponents;
+  }
+
+  interface ComponentsOptions {
+    [key: string]: ThemeComponents;
+    // PrimaryButton?: ThemeComponents;
   }
 }
 
@@ -110,6 +128,25 @@ const theme = createTheme({
       fontSize: '1.25rem',
       lineHeight: 1.5,
       fontWeightRegular: 500,
+    },
+  },
+  components: {
+    PrimaryButton: {
+      variants: {
+        small: {
+          padding: '0.5rem 1rem',
+          color: '#000000',
+          backgroundColor: '#D1FA31',
+          borderRadius: '3rem',
+        },
+
+        large: {
+          padding: '1rem 2rem',
+          color: '#000000',
+          backgroundColor: '#D1FA31',
+          borderRadius: '1rem',
+        },
+      },
     },
   },
 });
