@@ -1,5 +1,6 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+import GlobalStyles from '@mui/material/GlobalStyles';
+// import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 
@@ -19,6 +20,7 @@ declare module '@mui/material/styles' {
     gray3: Palette['primary'];
     gray4: Palette['primary'];
     gray5: Palette['primary'];
+    gray6: Palette['primary'];
   }
 
   interface PaletteOptions {
@@ -32,6 +34,7 @@ declare module '@mui/material/styles' {
     gray3?: PaletteOptions['primary'];
     gray4?: PaletteOptions['primary'];
     gray5?: PaletteOptions['primary'];
+    gray6?: PaletteOptions['primary'];
   }
 }
 
@@ -74,16 +77,59 @@ const theme = createTheme({
       contrastText: '#FFFFFF',
     },
     gray5: {
+      main: '#444444',
+      contrastText: '#FFFFFF',
+    },
+    gray6: {
       main: '#000000',
       contrastText: '#FFFFFF',
     },
   },
+  typography: {
+    fontFamily: 'Noto Sans TC, sans-serif',
+    fontSize: 16,
+    // lineHeight: 1.75,
+    fontWeightRegular: 500,
+    h1: {
+      fontSize: '3rem',
+      lineHeight: 1.5,
+      fontWeightRegular: 700,
+    },
+    h2: {
+      fontSize: '1.75rem',
+      lineHeight: 1.5,
+      fontWeightRegular: 700,
+    },
+    h3: {
+      fontSize: '1.5rem',
+      lineHeight: 1.5,
+      fontWeightRegular: 700,
+    },
+    h4: {
+      fontSize: '1.25rem',
+      lineHeight: 1.5,
+      fontWeightRegular: 500,
+    },
+  },
 });
+
+const inputGlobalStyles = (
+  <GlobalStyles
+    styles={{
+      body: {
+        lineHeight: 1.75,
+        color: theme.palette.gray5.main,
+      },
+    }}
+  />
+);
 
 function App(): JSX.Element {
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
+      {/* <CssBaseline /> */}
+      {inputGlobalStyles}
+
 
       <Container sx={{ maxWidth: '1184px' }} maxWidth={false}>
           <Toolbar id="back-to-top-anchor" />
