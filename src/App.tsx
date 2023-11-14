@@ -4,6 +4,7 @@ import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 
+import Toolbar from '@mui/material/Toolbar';
 import Fab from '@mui/material/Fab';
 
 import ScrollTop from './components/ScrollTop';
