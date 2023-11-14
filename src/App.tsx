@@ -5,8 +5,11 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 
 import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+
 import Fab from '@mui/material/Fab';
 
+import Navbar from './components/Navbar';
 import ScrollTop from './components/ScrollTop';
 
 declare module '@mui/material/styles' {
@@ -168,9 +171,19 @@ function App(): JSX.Element {
       {/* <CssBaseline /> */}
       {inputGlobalStyles}
 
+      <Navbar />
 
       <Container sx={{ maxWidth: '1184px' }} maxWidth={false}>
+        <Box component="main" sx={{ p: 3 }}>
           <Toolbar id="back-to-top-anchor" />
+
+          <Typography>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            unde fugit veniam eius, perspiciatis sunt? Corporis qui ducimus
+            quibusdam, aliquam dolore excepturi quae.
+          </Typography>
+        </Box>
+
         <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} />
       </Container>
 
