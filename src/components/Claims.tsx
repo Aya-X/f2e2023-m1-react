@@ -1,18 +1,11 @@
-import Container from '@mui/material/Container';
-
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
+import PrimaryContainer from './PrimaryContainer';
+
 export default function Claims() {
   return (
-    <Container
-      id="claims"
-      sx={{
-        maxWidth: '1184px',
-        mb: { xs: '32px', md: '64px' },
-      }}
-      maxWidth={false}
-    >
+    <PrimaryContainer elementId="claims">
       <Box sx={{ display: { md: 'flex' } }}>
         <Box sx={{ width: { md: '25%' } }}>
           <Typography
@@ -42,6 +35,6 @@ export default function Claims() {
           </Typography>
         </Box>
       </Box>
-    </Container>
+    </PrimaryContainer>
   );
 }

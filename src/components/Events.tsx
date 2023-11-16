@@ -1,11 +1,11 @@
 import { styled } from '@mui/material/styles';
 
-import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 
+import PrimaryContainer from './PrimaryContainer';
 import PrimaryButton from './PrimaryButton';
 import ImgIcon from './ImgIcon';
 
@@ -59,14 +59,7 @@ const eventItems = [
 
 export default function Events() {
   return (
-    <Container
-      id="events"
-      sx={{
-        maxWidth: '1184px',
-        mb: { xs: '32px', md: '64px' },
-      }}
-      maxWidth={false}
-    >
+    <PrimaryContainer elementId="events">
       <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
         <Box sx={{ width: { md: '25%' } }}>
           <Typography
@@ -179,6 +172,6 @@ export default function Events() {
           ))}
         </List>
       </Box>
-    </Container>
+    </PrimaryContainer>
   );
 }
