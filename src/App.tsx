@@ -9,6 +9,7 @@ import ScrollTop from './components/ScrollTop';
 import Hero from './components/Hero';
 import Claims from './components/Claims';
 import Events from './components/Events';
+import Issues from './components/Issues';
 
 declare module '@mui/material/styles' {
   // 能夠在 palette 中找到這個屬性
@@ -177,6 +178,8 @@ function App(): JSX.Element {
       <Claims />
 
       <Events />
+
+      <Issues />
 
       <ScrollTop>
         <Fab

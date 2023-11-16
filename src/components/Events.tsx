@@ -159,7 +159,7 @@ export default function Events() {
                   }}
                 >
                   <Typography component="time" color="lime5.main">
-                    12.26.2023
+                    {item.time}
                   </Typography>
 
                   <PrimaryButton size="small">
