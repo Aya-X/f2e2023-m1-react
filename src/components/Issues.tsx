@@ -195,7 +195,7 @@ export default function Issues() {
         </Tabs>
 
         {tabItems.map((item, index) => (
-          <CustomTabPanel value={value} index={index}>
+          <CustomTabPanel key={item.title} value={value} index={index}>
             <Typography
               variant="h2"
               component="h4"
@@ -215,6 +215,7 @@ export default function Issues() {
             >
               {item.subItems.map((subItem) => (
                 <ListItem
+                  key={subItem.title}
                   sx={{
                     width: { xs: '100%', md: '33.33%' },
                     display: 'flex',

@@ -198,24 +198,30 @@ export default function Navbar() {
                 gap: 2,
               }}
             >
-              <PrimaryButton size="small">
-                <ImgIcon src={ImgHandCoins} alt="MENU" isSmall />
-                <Typography
-                  sx={{
-                    display: { xs: 'none', md: 'inline-flex' },
-                    fontSize: '1rem',
-                  }}
-                >
-                  小額捐款
-                </Typography>
-              </PrimaryButton>
+              <Button
+                href="#donations"
+                sx={{ p: 0, color: 'gray6.main', borderRadius: '16px' }}
+              >
+                <PrimaryButton size="small">
+                  <ImgIcon src={ImgHandCoins} alt="MENU" isSmall />
+                  <Typography
+                    sx={{
+                      display: { xs: 'none', md: 'inline-flex' },
+                      fontSize: '1rem',
+                    }}
+                  >
+                    小額捐款
+                  </Typography>
+                </PrimaryButton>
+              </Button>
 
               {navItems.map((item) => (
                 <Button
+                  variant="text"
                   key={item.title}
                   href={item.href}
                   sx={{
-                    p: 0,
+                    // p: 0,
                     color: 'gray6.main',
 
                     '@media (min-width: 600px)': {
