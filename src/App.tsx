@@ -1,16 +1,18 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import GlobalStyles from '@mui/material/GlobalStyles';
-// import CssBaseline from '@mui/material/CssBaseline';
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
-
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import CssBaseline from '@mui/material/CssBaseline';
 
 import Fab from '@mui/material/Fab';
 
 import Navbar from './components/Navbar';
 import ScrollTop from './components/ScrollTop';
+import Hero from './components/Hero';
+import Claims from './components/Claims';
+import Events from './components/Events';
+import Issues from './components/Issues';
+import Donations from './components/Donations';
+import Services from './components/Services';
+import Footer from './components/Footer';
 
 declare module '@mui/material/styles' {
   // 能夠在 palette 中找到這個屬性
@@ -144,6 +146,7 @@ const theme = createTheme({
         },
 
         large: {
+          width: '100%',
           padding: '1rem 2rem',
           color: '#000000',
           backgroundColor: '#D1FA31',
@@ -160,6 +163,7 @@ const inputGlobalStyles = (
       body: {
         lineHeight: 1.75,
         color: theme.palette.gray5.main,
+        overflowX: 'hidden',
       },
     }}
   />
@@ -168,24 +172,24 @@ const inputGlobalStyles = (
 function App(): JSX.Element {
   return (
     <ThemeProvider theme={theme}>
-      {/* <CssBaseline /> */}
+      <CssBaseline />
       {inputGlobalStyles}
 
       <Navbar />
 
-      <Container sx={{ maxWidth: '1184px' }} maxWidth={false}>
-        <Box component="main" sx={{ p: 3 }}>
-          <Toolbar id="back-to-top-anchor" />
+      <Hero />
 
-          <Typography>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-            unde fugit veniam eius, perspiciatis sunt? Corporis qui ducimus
-            quibusdam, aliquam dolore excepturi quae.
-          </Typography>
-        </Box>
+      <Claims />
 
-        <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} />
-      </Container>
+      <Events />
+
+      <Issues />
+
+      <Donations />
+
+      <Services />
+
+      <Footer />
 
       <ScrollTop>
         <Fab
