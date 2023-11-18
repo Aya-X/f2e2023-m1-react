@@ -14,6 +14,9 @@ import Donations from './components/Donations';
 import Services from './components/Services';
 import Footer from './components/Footer';
 
+import ImgIcon from './components/ImgIcon';
+import IconSupernova from './assets/Supernova.svg';
+
 declare module '@mui/material/styles' {
   // 能夠在 palette 中找到這個屬性
   interface Palette {
@@ -165,6 +168,17 @@ const inputGlobalStyles = (
         color: theme.palette.gray5.main,
         overflowX: 'hidden',
       },
+
+      '*::-webkit-scrollbar': {
+        width: '0.75rem',
+      },
+      '*::-webkit-scrollbar-track': {
+        '-webkit-box-shadow': 'inset 0 0 6px rgba(0,0,0,0.00)',
+      },
+      '*::-webkit-scrollbar-thumb': {
+        backgroundColor: theme.palette.lime5.main,
+        // outline: '1px solid slategrey',
+      },
     }}
   />
 );
@@ -194,14 +208,15 @@ function App(): JSX.Element {
       <ScrollTop>
         <Fab
           sx={{
-            bgcolor: () => theme.palette.lime5.main,
+            bgcolor: () => theme.palette.gray5.main,
             // color: () => theme.palette.gray1.main,
           }}
           size="small"
           aria-label="scroll back to top"
         >
           {/* <KeyboardArrowUpIcon /> */}
-          <p>UP</p>
+          {/* <p>UP</p> */}
+          <ImgIcon src={IconSupernova} alt={IconSupernova} />
         </Fab>
       </ScrollTop>
     </ThemeProvider>
