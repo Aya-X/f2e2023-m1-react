@@ -1,0 +1,20 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="32" height="32" fill="#F5F5F5"/>
+<g id="Guideline">
+<path d="M-707 -1714C-707 -1722.84 -699.837 -1730 -691 -1730H690C698.837 -1730 706 -1722.84 706 -1714V3267C706 3275.84 698.837 3283 690 3283H-691C-699.837 3283 -707 3275.84 -707 3267V-1714Z" fill="#E2E2E2"/>
+<g id="Icons">
+<path d="M-634 -86C-634 -94.8365 -626.837 -102 -618 -102H615C623.837 -102 631 -94.8366 631 -86V117C631 125.837 623.837 133 615 133H-618C-626.837 133 -634 125.837 -634 117V-86Z" fill="white"/>
+<path d="M-618 -101H615V-103H-618V-101ZM630 -86V117H632V-86H630ZM615 132H-618V134H615V132ZM-633 117V-86H-635V117H-633ZM-618 132C-626.284 132 -633 125.284 -633 117H-635C-635 126.389 -627.389 134 -618 134V132ZM630 117C630 125.284 623.284 132 615 132V134C624.389 134 632 126.389 632 117H630ZM615 -101C623.284 -101 630 -94.2843 630 -86H632C632 -95.3888 624.389 -103 615 -103V-101ZM-618 -103C-627.389 -103 -635 -95.3888 -635 -86H-633C-633 -94.2843 -626.284 -101 -618 -101V-103Z" fill="#E2E2E2"/>
+<g id="List" clip-path="url(#clip0_6_39)">
+<path id="Vector" d="M5 16H27" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M5 8H27" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M5 24H27" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_6_39">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>
