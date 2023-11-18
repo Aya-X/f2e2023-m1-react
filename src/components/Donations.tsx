@@ -75,7 +75,7 @@ export default function Donations(): JSX.Element {
             width: { md: '41%' },
             display: 'flex',
             flexDirection: 'column',
-            height: { md: 'calc(100vh - 80px)' },
+            height: { md: '100vh' },
           }}
         >
           <Box sx={{ mb: '32px' }}>

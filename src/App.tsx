@@ -11,6 +11,7 @@ import Claims from './components/Claims';
 import Events from './components/Events';
 import Issues from './components/Issues';
 import Donations from './components/Donations';
+import Services from './components/Services';
 
 declare module '@mui/material/styles' {
   // 能夠在 palette 中找到這個屬性
@@ -144,6 +145,7 @@ const theme = createTheme({
         },
 
         large: {
+          width: '100%',
           padding: '1rem 2rem',
           color: '#000000',
           backgroundColor: '#D1FA31',
@@ -183,6 +185,8 @@ function App(): JSX.Element {
       <Issues />
 
       <Donations />
+
+      <Services />
 
       <ScrollTop>
         <Fab
