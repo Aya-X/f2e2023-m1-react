@@ -173,11 +173,16 @@ const inputGlobalStyles = (
         width: '0.75rem',
       },
       '*::-webkit-scrollbar-track': {
-        '-webkit-box-shadow': 'inset 0 0 6px rgba(0,0,0,0.00)',
+        WebkitBoxShadow: 'inset 0 0 6px rgba(0,0,0,0.00)',
       },
       '*::-webkit-scrollbar-thumb': {
         backgroundColor: theme.palette.lime5.main,
         // outline: '1px solid slategrey',
+      },
+
+      '*::selection': {
+        color: theme.palette.lime3.main,
+        backgroundColor: theme.palette.gray5.main,
       },
     }}
   />

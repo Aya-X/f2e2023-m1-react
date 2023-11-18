@@ -188,7 +188,28 @@ export default function Footer(): JSX.Element {
         </Box>
 
         <Typography sx={{ textAlign: 'center', fontWeight: 400 }}>
-          <small>&copy; 2023 黑新星 Supernova Black 版權所有。</small>
+          <small>
+            &copy; 2023 黑新星{' '}
+            <Button
+              variant="text"
+              href="https://github.com/Aya-X/f2e2023-m1-react"
+              target="_blank"
+              rel="noreferrer"
+              sx={{
+                padding: '0 0 4px 0',
+                m: 0,
+                minWidth: 'fit-content',
+                color: 'gray1.main',
+                fontSize: '.875rem',
+                '&:hover': {
+                  color: 'lime3.main',
+                },
+              }}
+            >
+              Supernova Black
+            </Button>{' '}
+            版權所有。
+          </small>
         </Typography>
       </Container>
     </FooterStyled>

@@ -98,7 +98,7 @@ export default function Hero() {
 
         <Typography
           variant="h3"
-          component="h3"
+          component="p"
           sx={{
             position: 'absolute',
             left: { xs: '16px' },
@@ -117,7 +117,7 @@ export default function Hero() {
 
         <Typography
           variant="h1"
-          component="h3"
+          component="p"
           sx={{
             position: 'absolute',
             left: { xs: '-20px' },
@@ -142,16 +142,33 @@ export default function Hero() {
             pl: 4,
             textAlign: 'center',
             fontWeight: 700,
-            fontSize: { xs: '80px', md: '260px' },
             lineHeight: { xs: '120px', md: '320px' },
             letterSpacing: { xs: '.25rem', md: '.8125rem' },
+            // fontSize: { xs: '80px', md: '240px', lg: '260px' },
+
+            fontSize: '80px',
+            '@media (min-width: 640px)': {
+              fontSize: '100px',
+            },
+            '@media (min-width: 768px)': {
+              fontSize: '120px',
+            },
+            '@media (min-width: 900px)': {
+              fontSize: '180px',
+            },
+            '@media (min-width: 1024px)': {
+              fontSize: '210px',
+            },
+            '@media (min-width: 1280px)': {
+              fontSize: '260px',
+            },
           }}
         >
           <Box
             sx={{
               display: 'flex',
               flexDirection: 'column',
-              alignItems: { xs: 'flex-start', md: 'center' },
+              alignItems: { xs: 'flex-start', sm: 'center' },
               justifyContent: 'space-between',
               height: { md: 'calc(100vh - 80px)' },
             }}

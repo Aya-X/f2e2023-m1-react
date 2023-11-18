@@ -221,7 +221,6 @@ export default function Navbar() {
                   key={item.title}
                   href={item.href}
                   sx={{
-                    // p: 0,
                     color: 'gray6.main',
 
                     '@media (min-width: 600px)': {
