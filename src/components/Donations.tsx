@@ -68,6 +68,8 @@ export default function Donations(): JSX.Element {
           flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'space-between',
           gap: '32px',
+          height: { md: '640px' },
+          // height: { md: 'calc(100vh - 80px)' },
         }}
       >
         <Box
@@ -75,7 +77,7 @@ export default function Donations(): JSX.Element {
             width: { md: '41%' },
             display: 'flex',
             flexDirection: 'column',
-            height: { md: '100vh' },
+            height: { md: '100%' },
           }}
         >
           <Box sx={{ mb: '32px' }}>

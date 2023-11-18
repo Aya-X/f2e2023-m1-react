@@ -28,7 +28,7 @@ const ImgCard = styled('img')(({ theme }) => ({
     height: '184.48px',
   },
   [theme.breakpoints.up('md')]: {
-    height: '158px',
+    height: '100%',
   },
 }));
 
@@ -115,7 +115,7 @@ export default function Events() {
                   flexDirection: 'column',
                   gap: '8px',
 
-                  height: { xs: 'auto', md: '170px' },
+                  height: { xs: 'auto', md: '100%' },
                 }}
               >
                 <Typography

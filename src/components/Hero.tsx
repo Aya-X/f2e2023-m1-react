@@ -14,6 +14,13 @@ import ImgArrowRight from '../assets/Icon-ArrowRight.svg';
 import ImgVote from '../assets/Icon-vote.svg';
 import ImgNumber from '../assets/Icon-Number.svg';
 
+const HiddenText = styled('span')(({ theme }) => ({
+  display: 'none',
+  [theme.breakpoints.up('sm')]: {
+    display: 'inline',
+  },
+}));
+
 const ImgHero = styled('img')({
   position: 'absolute',
   right: '-16px',
@@ -94,8 +101,8 @@ export default function Hero() {
           component="h3"
           sx={{
             position: 'absolute',
-            left: { xs: '0' },
-            bottom: { xs: '41%' },
+            left: { xs: '16px' },
+            bottom: { xs: '39%' },
             display: { xs: 'inline-flex', md: 'none' },
             gap: 1,
             alignItems: 'center',
@@ -132,7 +139,7 @@ export default function Hero() {
           variant="h1"
           component="h2"
           sx={{
-            pl: { md: 4 },
+            pl: 4,
             textAlign: 'center',
             fontWeight: 700,
             fontSize: { xs: '80px', md: '260px' },
@@ -140,9 +147,21 @@ export default function Hero() {
             letterSpacing: { xs: '.25rem', md: '.8125rem' },
           }}
         >
-          喵喵權益
-          <br />
-          我帶頭。
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: { xs: 'flex-start', md: 'center' },
+              justifyContent: 'space-between',
+              height: { md: 'calc(100vh - 80px)' },
+            }}
+          >
+            <span>喵喵權益</span>
+            {/* <br /> */}
+            <span>
+              我帶頭<HiddenText>。</HiddenText>
+            </span>
+          </Box>
         </Typography>
       </Box>
     </Container>

@@ -39,7 +39,7 @@ const grey = {
 
 const Textarea = styled(BaseTextareaAutosize)(
   ({ theme }) => `
-  width: 94%;
+  width: 100%;
   padding: 16px;
   border-radius: 8px;
   color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]};
@@ -211,10 +211,9 @@ export default function Services(): JSX.Element {
       >
         <Box
           sx={{
-            width: { md: '44%' },
+            width: { md: '41%' },
             display: 'flex',
             flexDirection: 'column',
-            height: { md: 'calc(100vh - 80px)' },
           }}
         >
           <Box sx={{ mb: '32px' }}>
@@ -261,7 +260,7 @@ export default function Services(): JSX.Element {
 
         <Box
           sx={{
-            width: { md: '56%' },
+            width: { md: '57%' },
             p: '32px',
             backgroundColor: 'lime1.main',
             borderRadius: '16px',
