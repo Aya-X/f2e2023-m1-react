@@ -139,6 +139,7 @@ export default function Issues() {
   const [value, setValue] = useState(1);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    console.log(event);
     setValue(newValue);
   };
 
