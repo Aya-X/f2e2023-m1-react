@@ -1,6 +1,6 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import GlobalStyles from '@mui/material/GlobalStyles';
-// import CssBaseline from '@mui/material/CssBaseline';
+import CssBaseline from '@mui/material/CssBaseline';
 
 import Fab from '@mui/material/Fab';
 
@@ -12,6 +12,7 @@ import Events from './components/Events';
 import Issues from './components/Issues';
 import Donations from './components/Donations';
 import Services from './components/Services';
+import Footer from './components/Footer';
 
 declare module '@mui/material/styles' {
   // 能夠在 palette 中找到這個屬性
@@ -171,7 +172,7 @@ const inputGlobalStyles = (
 function App(): JSX.Element {
   return (
     <ThemeProvider theme={theme}>
-      {/* <CssBaseline /> */}
+      <CssBaseline />
       {inputGlobalStyles}
 
       <Navbar />
@@ -187,6 +188,8 @@ function App(): JSX.Element {
       <Donations />
 
       <Services />
+
+      <Footer />
 
       <ScrollTop>
         <Fab
