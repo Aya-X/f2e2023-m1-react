@@ -1,4 +1,5 @@
 import { styled } from '@mui/material/styles';
+import Slide from '@mui/material/Slide';
 
 import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,6 +14,13 @@ import ImgHeroBlack from '../assets/Black-01.svg';
 import ImgArrowRight from '../assets/Icon-ArrowRight.svg';
 import ImgVote from '../assets/Icon-vote.svg';
 import ImgNumber from '../assets/Icon-Number.svg';
+
+const HiddenText = styled('span')(({ theme }) => ({
+  display: 'none',
+  [theme.breakpoints.up('sm')]: {
+    display: 'inline',
+  },
+}));
 
 const ImgHero = styled('img')({
   position: 'absolute',
@@ -75,7 +83,10 @@ export default function Hero() {
           borderRadius: '1rem',
         }}
       >
-        <ImgHero src={ImgHeroBlack} alt="IMG-HERO" />
+        <Slide direction="up" in mountOnEnter unmountOnExit>
+          <ImgHero src={ImgHeroBlack} alt="IMG-HERO" />
+        </Slide>
+
         <Box
           sx={{
             position: 'absolute',
@@ -83,19 +94,20 @@ export default function Hero() {
             bottom: { xs: '41vh', md: '16px' },
           }}
         >
-          <PrimaryButton size="small">
+          <PrimaryButton data-aos="fade-left" size="small">
             候選人簡介
             <ImgIcon src={ImgArrowRight} alt="ArrowRight" isSmall />
           </PrimaryButton>
         </Box>
 
         <Typography
+          data-aos="fade-left"
           variant="h3"
-          component="h3"
+          component="p"
           sx={{
             position: 'absolute',
-            left: { xs: '0' },
-            bottom: { xs: '41%' },
+            left: { xs: '16px' },
+            bottom: { xs: '39%' },
             display: { xs: 'inline-flex', md: 'none' },
             gap: 1,
             alignItems: 'center',
@@ -109,8 +121,9 @@ export default function Hero() {
         </Typography>
 
         <Typography
+          data-aos="fade-left"
           variant="h1"
-          component="h3"
+          component="p"
           sx={{
             position: 'absolute',
             left: { xs: '-20px' },
@@ -132,17 +145,46 @@ export default function Hero() {
           variant="h1"
           component="h2"
           sx={{
-            pl: { md: 4 },
+            pl: 4,
             textAlign: 'center',
             fontWeight: 700,
-            fontSize: { xs: '80px', md: '260px' },
             lineHeight: { xs: '120px', md: '320px' },
             letterSpacing: { xs: '.25rem', md: '.8125rem' },
+            // fontSize: { xs: '80px', md: '240px', lg: '260px' },
+
+            fontSize: '80px',
+            '@media (min-width: 640px)': {
+              fontSize: '100px',
+            },
+            '@media (min-width: 768px)': {
+              fontSize: '120px',
+            },
+            '@media (min-width: 900px)': {
+              fontSize: '180px',
+            },
+            '@media (min-width: 1024px)': {
+              fontSize: '210px',
+            },
+            '@media (min-width: 1280px)': {
+              fontSize: '260px',
+            },
           }}
         >
-          喵喵權益
-          <br />
-          我帶頭。
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: { xs: 'flex-start', sm: 'center' },
+              justifyContent: 'space-between',
+              height: { md: 'calc(100vh - 80px)' },
+            }}
+          >
+            <span>喵喵權益</span>
+            {/* <br /> */}
+            <span>
+              我帶頭<HiddenText>。</HiddenText>
+            </span>
+          </Box>
         </Typography>
       </Box>
     </Container>

@@ -28,7 +28,12 @@ const ImgCard = styled('img')(({ theme }) => ({
     height: '184.48px',
   },
   [theme.breakpoints.up('md')]: {
-    height: '158px',
+    height: '100%',
+  },
+
+  '&:hover': {
+    transform: 'scale(1.05)',
+    transition: 'transform .3s ease',
   },
 }));
 
@@ -91,6 +96,7 @@ export default function Events() {
         >
           {eventItems.map((item) => (
             <ListItem
+              data-aos="fade-left"
               key={item.imgSrc}
               disablePadding
               sx={{
@@ -115,7 +121,7 @@ export default function Events() {
                   flexDirection: 'column',
                   gap: '8px',
 
-                  height: { xs: 'auto', md: '170px' },
+                  height: { xs: 'auto', md: '100%' },
                 }}
               >
                 <Typography

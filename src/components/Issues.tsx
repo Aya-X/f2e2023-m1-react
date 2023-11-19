@@ -138,8 +138,10 @@ function a11yProps(index: number) {
 export default function Issues() {
   const [value, setValue] = useState(1);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    console.log(event);
+  const handleChange = (_: React.SyntheticEvent, newValue: number) => {
+    // #NOTE: Avoid ts error
+    // const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    // console.log(event);
     setValue(newValue);
   };
 
@@ -186,6 +188,10 @@ export default function Issues() {
                   color: 'gray6.main',
                   fontWeight: 500,
                 },
+                '&:hover': {
+                  backgroundColor: 'lime3.main',
+                },
+
                 py: '16px',
                 width: '33%',
                 backgroundColor: 'lime4.main',

@@ -18,7 +18,7 @@ const NavLogo = styled('h1')({
 export default function LinkNavLogo() {
   return (
     <Button
-      href="#nav"
+      href="#"
       title="SUPERNOVA-BLACK"
       sx={{ display: 'inline-flex', height: '48px', p: 0 }}
     >
