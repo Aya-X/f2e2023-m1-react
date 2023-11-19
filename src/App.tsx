@@ -188,6 +188,11 @@ const inputGlobalStyles = (
         color: theme.palette.lime3.main,
         backgroundColor: theme.palette.gray5.main,
       },
+
+      ':root': {
+        scrollPaddingTop: '11rem',
+        scrollBehavior: 'smooth',
+      },
     }}
   />
 );
