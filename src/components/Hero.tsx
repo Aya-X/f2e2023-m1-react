@@ -1,4 +1,5 @@
 import { styled } from '@mui/material/styles';
+import Slide from '@mui/material/Slide';
 
 import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
@@ -82,7 +83,10 @@ export default function Hero() {
           borderRadius: '1rem',
         }}
       >
-        <ImgHero src={ImgHeroBlack} alt="IMG-HERO" />
+        <Slide direction="up" in mountOnEnter unmountOnExit>
+          <ImgHero src={ImgHeroBlack} alt="IMG-HERO" />
+        </Slide>
+
         <Box
           sx={{
             position: 'absolute',
@@ -90,13 +94,14 @@ export default function Hero() {
             bottom: { xs: '41vh', md: '16px' },
           }}
         >
-          <PrimaryButton size="small">
+          <PrimaryButton data-aos="fade-left" size="small">
             候選人簡介
             <ImgIcon src={ImgArrowRight} alt="ArrowRight" isSmall />
           </PrimaryButton>
         </Box>
 
         <Typography
+          data-aos="fade-left"
           variant="h3"
           component="p"
           sx={{
@@ -116,6 +121,7 @@ export default function Hero() {
         </Typography>
 
         <Typography
+          data-aos="fade-left"
           variant="h1"
           component="p"
           sx={{

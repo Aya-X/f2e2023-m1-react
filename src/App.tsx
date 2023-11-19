@@ -1,3 +1,7 @@
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -189,6 +193,12 @@ const inputGlobalStyles = (
 );
 
 function App(): JSX.Element {
+  useEffect(() => {
+    AOS.init({
+      offset: 60,
+    });
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -198,15 +208,25 @@ function App(): JSX.Element {
 
       <Hero />
 
-      <Claims />
+      <div data-aos="fade-up">
+        <Claims />
+      </div>
 
-      <Events />
+      <div data-aos="fade-up">
+        <Events />
+      </div>
 
-      <Issues />
+      <div data-aos="fade-up">
+        <Issues />
+      </div>
 
-      <Donations />
+      <div data-aos="fade-up">
+        <Donations />
+      </div>
 
-      <Services />
+      <div data-aos="fade-up">
+        <Services />
+      </div>
 
       <Footer />
 

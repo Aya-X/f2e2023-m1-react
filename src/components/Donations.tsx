@@ -114,6 +114,7 @@ export default function Donations(): JSX.Element {
           </Typography>
 
           <Box
+            data-aos="flip-left"
             sx={{
               backgroundColor: 'gray6.main',
               padding: '16px 32px',
@@ -144,7 +145,7 @@ export default function Donations(): JSX.Element {
             sx={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
           >
             {donationItems.map((item) => (
-              <ListItem key={item.title} disablePadding>
+              <ListItem key={item.title} data-aos="fade-left" disablePadding>
                 <ListItemButton
                   sx={{
                     display: 'flex',

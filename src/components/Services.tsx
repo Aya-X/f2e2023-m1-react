@@ -256,7 +256,7 @@ export default function Services(): JSX.Element {
           </Typography>
         </Box>
 
-        <ImgBack src={ImgBlack} alt="ImgBlack" />
+        <ImgBack data-aos="fade-left" src={ImgBlack} alt="ImgBlack" />
 
         <Box
           sx={{

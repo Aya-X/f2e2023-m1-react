@@ -30,6 +30,11 @@ const ImgCard = styled('img')(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
     height: '100%',
   },
+
+  '&:hover': {
+    transform: 'scale(1.05)',
+    transition: 'transform .3s ease',
+  },
 }));
 
 const eventItems = [
@@ -91,6 +96,7 @@ export default function Events() {
         >
           {eventItems.map((item) => (
             <ListItem
+              data-aos="fade-left"
               key={item.imgSrc}
               disablePadding
               sx={{
